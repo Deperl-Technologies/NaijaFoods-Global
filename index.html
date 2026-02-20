@@ -931,6 +931,7 @@ body.dark-mode .faq-cat-title{color:var(--green-light);}
 /* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s cubic-bezier(.34,1.56,.64,1);}
 .reveal.visible{opacity:1;transform:translateY(0);}
+  @media(max-width:991px){.nav-logo .logo-text .tagline{display:none;}#searchbtn{display:none!important;}}
 
   @media(max-width:991px){.nav-logo .logo-text .tagline{display:none;}}
 </style>
@@ -2173,6 +2174,12 @@ body.dark-mode .faq-cat-title{color:var(--green-light);}
     <button class="md-close" id="mdClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
   </div>
   <div class="md-body">
+    <div style="padding:16px 24px 0;">
+  <div style="display:flex;align-items:center;gap:10px;background:#f5f5f5;border-radius:12px;padding:10px 16px;">
+    <i class="fas fa-search" style="color:#888;font-size:14px;"></i>
+    <input type="text" placeholder="search products..." style="border:none;background:none;outline:none;font-size:14px;width:100%;font-family:inherit;color:#1a1a1a;"/>
+  </div>
+</div>
     <div class="md-section" style="padding-bottom:8px;">
       <a href="#meal-kits" class="md-link" style="display:block;text-align:center;padding:14px;background:var(--gold);color:var(--green-dark);border-radius:var(--radius-btn);font-weight:700;font-size:15px;transition:all .3s;"><i class="fas fa-bolt" style="margin-right:8px;"></i>Shop Now</a>
     </div>
