@@ -1,9 +1,9 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>NaijaFoods Global — Authentic Nigerian Food Delivered Worldwide</title>
+<title>FromNaija Mart — Authentic Nigerian Food Delivered Worldwide</title>
 <meta name="description" content="Authentic Nigerian food delivered worldwide. Shop meal kits, spices, grains &amp; more for diaspora families."/>
-<meta property="og:title" content="NaijaFoods Global — Authentic Nigerian Food Delivered Worldwide"/>
+<meta property="og:title" content="FromNaija Mart — Authentic Nigerian Food Delivered Worldwide"/>
 <meta property="og:description" content="Shop authentic Nigerian meal kits, spices, grains and snacks. Delivered to 45+ countries worldwide."/>
 <meta property="og:url" content="https://www.onspace.ai"/>
 <meta property="og:type" content="website"/>
@@ -12,7 +12,7 @@
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="NaijaFoods Global — Authentic Nigerian Food Delivered Worldwide"/>
+<meta name="twitter:title" content="FromNaija Mart — Authentic Nigerian Food Delivered Worldwide"/>
 <meta name="twitter:description" content="Shop authentic Nigerian meal kits, spices, grains and snacks. Delivered to 45+ countries worldwide."/>
 <meta name="twitter:image" content="https://cdn-ai.onspace.ai/onspace/project/screenshot/online/pre-site/9bfrew.jpg"/>
 <meta name="twitter:url" content="https://www.onspace.ai"/>
@@ -85,14 +85,12 @@ background:rgba(250,246,239,.85);backdrop-filter:blur(20px);-webkit-backdrop-fil
 transition:box-shadow .3s;
 }
 .main-nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.08);}
-.nav-inner{display:grid;grid-template-columns:auto auto;align-items:center;padding:14px 16px;max-width:1280px;margin:0 auto;gap:16px;}
-@media(min-width:992px){.nav-inner{grid-template-columns:auto 1fr auto;padding:14px 24px;}}
+.nav-inner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;padding:14px 24px;max-width:1280px;margin:0 auto;gap:16px;}
 .nav-logo{display:flex;align-items:center;gap:10px;}
-.nav-logo .logo-mark{width:40px;height:40px;background:var(--green-dark);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',serif;font-size:20px;font-weight:700;}
-.nav-logo .logo-text{display:flex;flex-direction:column;line-height:1.2;white-space:nowrap;}
+.nav-logo .logo-mark{width:40px;height:40px;border-radius:10px;overflow:hidden;flex-shrink:0;}.nav-logo .logo-mark img{width:100%;height:100%;object-fit:contain;}
+.nav-logo .logo-text{display:flex;flex-direction:column;line-height:1.2;}
 .nav-logo .logo-text .brand{font-weight:600;font-size:16px;color:var(--charcoal);}
-.nav-actions{display:flex;align-items:center;gap:8px;justify-self:end;min-width:0;overflow:hidden;}
-@media(max-width:400px){.nav-actions{gap:4px;}#darkModeBtn{display:none!important;}}
+.nav-logo .logo-text .tagline{font-size:10px;color:var(--muted);letter-spacing:.5px;}
 .nav-actions{display:flex;align-items:center;gap:8px;justify-self:end;}
 .nav-actions select{background:none;border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-size:13px;color:var(--mid);cursor:none;}
 .nav-action-btn{width:40px;height:40px;border-radius:10px;background:none;display:flex;align-items:center;justify-content:center;font-size:17px;color:var(--mid);transition:all .2s;position:relative;}
@@ -125,6 +123,17 @@ transition:box-shadow .3s;
 .hamburger.active span:nth-child(2){opacity:0;transform:scaleX(0);}
 .hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 @media(min-width:992px){.hamburger{display:none;}}
+@media(max-width:991px){#searchBtn{display:none;}}
+
+/* MOBILE DRAWER SEARCH */
+.md-search{padding:16px 24px 8px;}
+.md-search-bar{display:flex;align-items:center;gap:10px;background:#f0ede8;border-radius:var(--radius-btn);padding:12px 16px;}
+.md-search-bar i{color:var(--muted);font-size:16px;flex-shrink:0;}
+.md-search-bar input{flex:1;border:none;background:none;font-size:15px;color:var(--charcoal);font-family:'DM Sans',sans-serif;outline:none;}
+.md-search-bar input::placeholder{color:var(--muted);}
+body.dark-mode .md-search-bar{background:#222;}
+body.dark-mode .md-search-bar input{color:#eee;}
+body.dark-mode .md-search-bar i{color:#666;}
 
 /* MOBILE DRAWER */
 .mobile-drawer{position:fixed;top:0;left:0;width:100%;max-width:380px;height:100%;background:#fff;z-index:1001;transform:translateX(-100%);transition:transform .5s cubic-bezier(.33,1,.68,1);display:flex;flex-direction:column;overflow:hidden;}
@@ -313,7 +322,7 @@ section{padding:80px 0;}
 .site-footer{background:var(--charcoal);padding:64px 0 0;color:rgba(255,255,255,.6);}
 .footer-grid{max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.5fr;gap:40px;margin-bottom:48px;}
 .footer-brand .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
-.footer-brand .footer-logo .logo-mark{width:36px;height:36px;background:var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',serif;font-size:18px;font-weight:700;}
+.footer-brand .footer-logo .logo-mark{width:36px;height:36px;border-radius:10px;overflow:hidden;flex-shrink:0;}.footer-brand .footer-logo .logo-mark img{width:100%;height:100%;object-fit:contain;}
 .footer-brand .footer-logo .brand-name{color:#fff;font-weight:600;font-size:15px;}
 .footer-brand p{font-size:13px;line-height:1.7;margin-bottom:18px;}
 .social-icons{display:flex;gap:10px;}
@@ -931,9 +940,6 @@ body.dark-mode .faq-cat-title{color:var(--green-light);}
 /* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s cubic-bezier(.34,1.56,.64,1);}
 .reveal.visible{opacity:1;transform:translateY(0);}
-  @media(max-width:991px){.nav-logo .logo-text .tagline{display:none;}#searchbtn{display:none!important;}}
-
-  @media(max-width:991px){.nav-logo .logo-text .tagline{display:none;}}
 </style>
 </head>
 <body>
@@ -959,10 +965,10 @@ body.dark-mode .faq-cat-title{color:var(--green-light);}
 <nav class="main-nav" id="mainNav">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <div class="logo-mark">N</div>
+      <div class="logo-mark"><img src="https://cdn-ai.onspace.ai/onspace/project/uploads/6rFH75EKqJ2aEVjQPjm574/IMG_7015.PNG" alt="FromNaija Mart logo"/></div>
       <div class="logo-text">
-        <span class="brand">NaijaFoods Global</span>
-        <span class="tagline">Authentic Nigerian Food</span>
+        <span class="brand">FromNaija Mart</span>
+        <span class="tagline">Delivered Worldwide</span>
       </div>
     </a>
     <div class="nav-links">
@@ -1214,8 +1220,8 @@ body.dark-mode .faq-cat-title{color:var(--green-light);}
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="footer-logo">
-        <div class="logo-mark">N</div>
-        <span class="brand-name">NaijaFoods Global</span>
+        <div class="logo-mark"><img src="https://cdn-ai.onspace.ai/onspace/project/uploads/6rFH75EKqJ2aEVjQPjm574/IMG_7015.PNG" alt="FromNaija Mart logo"/></div>
+        <span class="brand-name">FromNaija Mart</span>
       </div>
       <p>Bringing the authentic taste of Nigeria to diaspora families worldwide. Every ingredient, every spice — just like home.</p>
       <div class="social-icons">
@@ -1247,7 +1253,7 @@ body.dark-mode .faq-cat-title{color:var(--green-light);}
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 NaijaFoods Global. All rights reserved.</span>
+    <span>© 2026 FromNaija Mart. All rights reserved.</span>
     <div style="display:flex;gap:16px;">
       <a href="#">Privacy Policy</a>
       <a href="#">Terms of Service</a>
@@ -2165,21 +2171,23 @@ body.dark-mode .faq-cat-title{color:var(--green-light);}
 <div class="mobile-drawer" id="mobileDrawer">
   <div class="md-header">
     <a href="#" class="nav-logo">
-      <div class="logo-mark" style="width:36px;height:36px;font-size:17px;">N</div>
+      <div class="logo-mark" style="width:36px;height:36px;"><img src="https://cdn-ai.onspace.ai/onspace/project/uploads/6rFH75EKqJ2aEVjQPjm574/IMG_7015.PNG" alt="FromNaija Mart logo"/></div>
       <div class="logo-text">
-        <span class="brand">NaijaFoods Global</span>
-        <span class="tagline">Authentic Nigerian Food</span>
+        <span class="brand">FromNaija Mart</span>
+        <span class="tagline">Delivered Worldwide</span>
       </div>
     </a>
     <button class="md-close" id="mdClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
   </div>
   <div class="md-body">
-    <div style="padding:16px 24px 0;">
-  <div style="display:flex;align-items:center;gap:10px;background:#f5f5f5;border-radius:12px;padding:10px 16px;">
-    <i class="fas fa-search" style="color:#888;font-size:14px;"></i>
-    <input type="text" placeholder="search products..." style="border:none;background:none;outline:none;font-size:14px;width:100%;font-family:inherit;color:#1a1a1a;"/>
-  </div>
-</div>
+    <div class="md-search">
+      <div class="md-search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" id="mdSearchInput" placeholder="Search products..." autocomplete="off"/>
+      </div>
+      <ul class="search-suggestions" id="mdSearchResults" style="margin-top:8px;display:none;"></ul>
+    </div>
+    <div class="md-divider"></div>
     <div class="md-section" style="padding-bottom:8px;">
       <a href="#meal-kits" class="md-link" style="display:block;text-align:center;padding:14px;background:var(--gold);color:var(--green-dark);border-radius:var(--radius-btn);font-weight:700;font-size:15px;transition:all .3s;"><i class="fas fa-bolt" style="margin-right:8px;"></i>Shop Now</a>
     </div>
@@ -2947,6 +2955,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ======== SEARCH AUTOCOMPLETE ========
+  // Mobile drawer search
+  const mdSearchInput = document.getElementById('mdSearchInput');
+  const mdSearchResults = document.getElementById('mdSearchResults');
+  mdSearchInput.addEventListener('input', e => {
+    const q = e.target.value.trim().toLowerCase();
+    if (q.length < 2) { mdSearchResults.style.display = 'none'; mdSearchResults.innerHTML = ''; return; }
+    const results = searchItems.filter(item => item.toLowerCase().includes(q));
+    if (results.length === 0) { mdSearchResults.style.display = 'none'; mdSearchResults.innerHTML = ''; return; }
+    mdSearchResults.style.display = 'block';
+    mdSearchResults.innerHTML = results.map(r => `<li style="padding:10px 12px;border-radius:8px;font-size:14px;color:var(--mid);cursor:pointer;transition:background .15s;display:flex;align-items:center;gap:10px;"><i class="fas fa-search" style="font-size:12px;color:var(--muted)"></i>${r}</li>`).join('');
+  });
+
   document.getElementById('searchInput').addEventListener('input', e => {
     const q = e.target.value.trim().toLowerCase();
     const body = document.getElementById('searchBody');
@@ -3295,6 +3315,10 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
 <script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
 <script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
+<script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
+<script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
+
+
 
 
 
