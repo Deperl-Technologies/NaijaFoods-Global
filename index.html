@@ -938,6 +938,28 @@ body.dark-mode .support-card h4{color:#eee;}
 body.dark-mode .wa-cta-card{background:linear-gradient(135deg,#04332e,#0a5c52);}
 body.dark-mode .faq-cat-title{color:var(--green-light);}
 
+/* CATEGORY PAGES */
+.cat-pg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px;}
+.cat-pg-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-card);overflow:hidden;transition:all .4s cubic-bezier(.34,1.56,.64,1);}
+.cat-pg-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.08);}
+.cat-pg-card-img{height:180px;overflow:hidden;position:relative;}
+.cat-pg-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.cat-pg-card:hover .cat-pg-card-img img{transform:scale(1.06);}
+.cat-pg-card-body{padding:16px;}
+.cat-pg-card-body h4{font-size:15px;font-weight:600;margin-bottom:4px;color:var(--charcoal);}
+.cat-pg-card-body .cat-pg-weight{font-size:12px;color:var(--muted);margin-bottom:10px;font-family:'Space Mono',monospace;}
+.cat-pg-card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--border);}
+.cat-pg-card-footer .cat-pg-price{font-family:'Space Mono',monospace;font-size:18px;font-weight:700;color:var(--charcoal);}
+.cat-pg-card-footer .cat-pg-add{background:var(--green);color:#fff;padding:8px 20px;border-radius:var(--radius-btn);font-size:13px;font-weight:600;transition:all .3s;cursor:none;border:none;}
+.cat-pg-card-footer .cat-pg-add:hover{background:var(--green-dark);}
+.cat-pg-card-footer .cat-pg-add.added{background:var(--gold);color:var(--green-dark);}
+.cat-pg-badge{position:absolute;top:10px;right:10px;padding:4px 12px;border-radius:var(--radius-pill);font-size:11px;font-weight:700;font-family:'Space Mono',monospace;background:var(--gold);color:var(--green-dark);}
+body.dark-mode .cat-pg-card{background:#1e1e1e;border-color:#2a2a2a;}
+body.dark-mode .cat-pg-card:hover{box-shadow:0 16px 48px rgba(0,0,0,.3);}
+body.dark-mode .cat-pg-card-body h4{color:#eee;}
+body.dark-mode .cat-pg-card-footer{border-top-color:#2a2a2a;}
+body.dark-mode .cat-pg-card-footer .cat-pg-price{color:#eee;}
+
 /* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s cubic-bezier(.34,1.56,.64,1);}
 .reveal.visible{opacity:1;transform:translateY(0);}
@@ -966,23 +988,23 @@ body.dark-mode .faq-cat-title{color:var(--green-light);}
 <nav class="main-nav" id="mainNav">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <div class="logo-mark"><img src="https://cdn-ai.onspace.ai/onspace/project/uploads/jvgk3wSpSbvRDD7R54kToX/IMG_7015-preview.png" alt="FromNaija Mart logo" style="background:#fff; border-radius:50%; padding:3px;" width="40" height="40">/></div>
-      <div class="logo-text" style="display:flex;flex-direction:column;line-height:1.2;">
-  <span class="brand">FromNaija Mart</span>
-  <span class="tagline">Delivered Worldwide</span>
-</div>
+      <div class="logo-mark"><img src="https://cdn-ai.onspace.ai/onspace/project/uploads/jvgk3wSpSbvRDD7R54kToX/IMG_7015-preview.png" alt="FromNaija Mart logo"/></div>
+      <div class="logo-text">
+        <span class="brand">FromNaija Mart</span>
+        <span class="tagline">Delivered Worldwide</span>
+      </div>
     </a>
     <div class="nav-links">
       <div class="nav-link-item"><a href="#" data-page="home">Home</a></div>
       <div class="nav-link-item has-dropdown">
         <a href="#categories">Shop <i class="fas fa-chevron-down"></i></a>
         <div class="nav-dropdown">
-          <a href="#categories"><i class="fas fa-wheat-awn"></i>Grains &amp; Cereals</a>
-          <a href="#categories"><i class="fas fa-pepper-hot"></i>Spices &amp; Seasonings</a>
-          <a href="#categories"><i class="fas fa-box-open"></i>Canned &amp; Dried Foods</a>
-          <a href="#categories"><i class="fas fa-cookie-bite"></i>Snacks</a>
-          <a href="#categories"><i class="fas fa-mug-hot"></i>Beverages</a>
-          <a href="#categories"><i class="fas fa-leaf"></i>Fresh Produce</a>
+          <a href="#" data-page="grains"><i class="fas fa-wheat-awn"></i>Grains &amp; Rice</a>
+          <a href="#" data-page="spices"><i class="fas fa-pepper-hot"></i>Spices &amp; Seasonings</a>
+          <a href="#" data-page="snacks"><i class="fas fa-cookie-bite"></i>Snacks</a>
+          <a href="#" data-page="beverages"><i class="fas fa-mug-hot"></i>Beverages</a>
+          <a href="#" data-page="proteins"><i class="fas fa-drumstick-bite"></i>Proteins</a>
+          <a href="#" data-page="sauces"><i class="fas fa-bottle-droplet"></i>Sauces</a>
         </div>
       </div>
       <div class="nav-link-item has-dropdown">
@@ -2168,6 +2190,180 @@ body.dark-mode .faq-cat-title{color:var(--green-light);}
   </div>
 </div>
 
+<!-- EMBEDDED PAGE: Grains &amp; Rice -->
+<div class="embedded-page" id="grainsPage">
+  <div class="ep-hero green-bg" style="background:linear-gradient(135deg,#78350f,#d97706) !important;">
+    <div class="ep-breadcrumb"><a href="#" data-page="home">Home</a><span>/</span><span>Shop</span><span>/</span><span>Grains &amp; Rice</span></div>
+    <h1>Grains &amp; <em>Rice</em></h1>
+    <p>Premium Nigerian grains, rice, and flour — sourced directly from trusted farms. The staple foundation of every authentic Nigerian kitchen.</p>
+  </div>
+  <div class="ep-section white-bg">
+    <div class="ep-container" style="max-width:1280px;">
+      <div class="ep-section-head">
+        <div class="section-tag">48 Products</div>
+        <h2 class="section-title">Premium <em>Grains &amp; Rice</em></h2>
+        <p class="section-desc" style="margin:0 auto">From Ofada rice to garri, poundo yam to beans — every grain is sourced for freshness and authenticity.</p>
+      </div>
+      <div class="cat-pg-grid">
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&amp;h=300&amp;fit=crop" alt="Premium Ofada Rice" loading="lazy"/><span class="cat-pg-badge">Best Seller</span></div><div class="cat-pg-card-body"><h4>Premium Ofada Rice</h4><div class="cat-pg-weight">5 lbs</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$18.99</span><button class="cat-pg-add" data-name="Premium Ofada Rice">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=400&amp;h=300&amp;fit=crop" alt="Long Grain Parboiled Rice" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Long Grain Parboiled Rice</h4><div class="cat-pg-weight">10 lbs</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$24.99</span><button class="cat-pg-add" data-name="Long Grain Parboiled Rice">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fef3c7/92400e?text=White+Garri+(Ijebu)" alt="White Garri Ijebu" loading="lazy"/></div><div class="cat-pg-card-body"><h4>White Garri (Ijebu)</h4><div class="cat-pg-weight">4 lbs</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$12.99</span><button class="cat-pg-add" data-name="White Garri (Ijebu)">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fef3c7/92400e?text=Yellow+Garri" alt="Yellow Garri" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Yellow Garri</h4><div class="cat-pg-weight">4 lbs</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$13.99</span><button class="cat-pg-add" data-name="Yellow Garri">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fef3c7/92400e?text=Semovita" alt="Semovita Semolina" loading="lazy"/><span class="cat-pg-badge">Popular</span></div><div class="cat-pg-card-body"><h4>Semovita (Semolina)</h4><div class="cat-pg-weight">2 kg</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$15.99</span><button class="cat-pg-add" data-name="Semovita">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fef3c7/92400e?text=Poundo+Yam+Flour" alt="Poundo Yam Flour" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Poundo Yam Flour</h4><div class="cat-pg-weight">2 kg</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$14.99</span><button class="cat-pg-add" data-name="Poundo Yam Flour">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fef3c7/92400e?text=Honey+Beans+(Oloyin)" alt="Honey Beans" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Honey Beans (Oloyin)</h4><div class="cat-pg-weight">3 lbs</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$16.99</span><button class="cat-pg-add" data-name="Honey Beans (Oloyin)">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fef3c7/92400e?text=Brown+Beans" alt="Brown Beans" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Brown Beans</h4><div class="cat-pg-weight">3 lbs</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$14.99</span><button class="cat-pg-add" data-name="Brown Beans">Add</button></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ep-section alt-bg"><div class="ep-container"><div class="ep-cta-banner"><h3>Looking for Something Else?</h3><p>Explore our full range of authentic Nigerian food categories.</p><button class="btn-gold" data-page="home" onclick="setTimeout(()=&gt;document.getElementById(&#39;categories&#39;).scrollIntoView({behavior:&#39;smooth&#39;}),400)"><i class="fas fa-th-large"></i> Browse All Categories</button></div></div></div>
+</div>
+
+<!-- EMBEDDED PAGE: Spices -->
+<div class="embedded-page" id="spicesPage">
+  <div class="ep-hero green-bg" style="background:linear-gradient(135deg,#7f1d1d,#dc2626) !important;">
+    <div class="ep-breadcrumb"><a href="#" data-page="home">Home</a><span>/</span><span>Shop</span><span>/</span><span>Spices &amp; Seasonings</span></div>
+    <h1>Spices &amp; <em>Seasonings</em></h1>
+    <p>The heart and soul of Nigerian cooking. Authentic spices, peppers, and seasonings to make every dish unforgettable.</p>
+  </div>
+  <div class="ep-section white-bg">
+    <div class="ep-container" style="max-width:1280px;">
+      <div class="ep-section-head">
+        <div class="section-tag">35 Products</div>
+        <h2 class="section-title">Authentic <em>Spices &amp; Seasonings</em></h2>
+        <p class="section-desc" style="margin:0 auto">From fiery Cameroon pepper to aromatic Ehuru — every spice shipped fresh from Nigeria.</p>
+      </div>
+      <div class="cat-pg-grid">
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&amp;h=300&amp;fit=crop" alt="Cameroon Pepper" loading="lazy"/><span class="cat-pg-badge">Best Seller</span></div><div class="cat-pg-card-body"><h4>Cameroon Pepper (Ground)</h4><div class="cat-pg-weight">8 oz</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$9.99</span><button class="cat-pg-add" data-name="Cameroon Pepper">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://images.unsplash.com/photo-1599909533601-aa539e0ed1e6?w=400&amp;h=300&amp;fit=crop" alt="Suya Spice Yaji" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Suya Spice (Yaji)</h4><div class="cat-pg-weight">12 oz</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$11.99</span><button class="cat-pg-add" data-name="Suya Spice (Yaji)">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fef2f2/991b1b?text=Ogiri" alt="Ogiri" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Ogiri (Fermented Locust Bean)</h4><div class="cat-pg-weight">6 oz</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$8.99</span><button class="cat-pg-add" data-name="Ogiri">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fef2f2/991b1b?text=Iru+(Dawadawa)" alt="Iru Dawadawa" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Iru (Dawadawa)</h4><div class="cat-pg-weight">6 oz</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$7.99</span><button class="cat-pg-add" data-name="Iru (Dawadawa)">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fef2f2/991b1b?text=Curry+Powder" alt="Nigerian Curry Powder" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Nigerian Curry Powder</h4><div class="cat-pg-weight">8 oz</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$6.99</span><button class="cat-pg-add" data-name="Nigerian Curry Powder">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fef2f2/991b1b?text=Uziza+Leaves" alt="Dried Uziza Leaves" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Dried Uziza Leaves</h4><div class="cat-pg-weight">4 oz</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$10.99</span><button class="cat-pg-add" data-name="Dried Uziza Leaves">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fef2f2/991b1b?text=Ehuru" alt="Ehuru Calabash Nutmeg" loading="lazy"/><span class="cat-pg-badge">New</span></div><div class="cat-pg-card-body"><h4>Ehuru (Calabash Nutmeg)</h4><div class="cat-pg-weight">4 oz</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$12.99</span><button class="cat-pg-add" data-name="Ehuru">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fef2f2/991b1b?text=Ground+Crayfish" alt="Ground Crayfish" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Ground Crayfish</h4><div class="cat-pg-weight">8 oz</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$14.99</span><button class="cat-pg-add" data-name="Ground Crayfish">Add</button></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ep-section alt-bg"><div class="ep-container"><div class="ep-cta-banner"><h3>Complete Your Spice Rack</h3><p>Browse our meal kits that include pre-measured spice blends for easy cooking.</p><button class="btn-gold" data-page="home" onclick="setTimeout(()=&gt;document.getElementById(&#39;meal-kits&#39;).scrollIntoView({behavior:&#39;smooth&#39;}),400)"><i class="fas fa-utensils"></i> View Meal Kits</button></div></div></div>
+</div>
+
+<!-- EMBEDDED PAGE: Snacks -->
+<div class="embedded-page" id="snacksPage">
+  <div class="ep-hero green-bg" style="background:linear-gradient(135deg,#7c2d12,#ea580c) !important;">
+    <div class="ep-breadcrumb"><a href="#" data-page="home">Home</a><span>/</span><span>Shop</span><span>/</span><span>Snacks</span></div>
+    <h1>Nigerian <em>Snacks</em></h1>
+    <p>Irresistible classics — from crunchy Chin Chin to spicy Kilishi. Perfect for sharing, gifting, or treating yourself.</p>
+  </div>
+  <div class="ep-section white-bg">
+    <div class="ep-container" style="max-width:1280px;">
+      <div class="ep-section-head">
+        <div class="section-tag">52 Products</div>
+        <h2 class="section-title">Authentic Nigerian <em>Snacks</em></h2>
+        <p class="section-desc" style="margin:0 auto">Sweet, savoury, and spicy — relive the flavours of home with every bite.</p>
+      </div>
+      <div class="cat-pg-grid">
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=400&amp;h=300&amp;fit=crop" alt="Chin Chin Classic" loading="lazy"/><span class="cat-pg-badge">Best Seller</span></div><div class="cat-pg-card-body"><h4>Chin Chin (Classic)</h4><div class="cat-pg-weight">500g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$8.99</span><button class="cat-pg-add" data-name="Chin Chin">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fff7ed/9a3412?text=Puff+Puff+Mix" alt="Puff Puff Mix" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Puff Puff Mix</h4><div class="cat-pg-weight">400g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$7.99</span><button class="cat-pg-add" data-name="Puff Puff Mix">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fff7ed/9a3412?text=Plantain+Chips" alt="Plantain Chips Spicy" loading="lazy"/><span class="cat-pg-badge">Popular</span></div><div class="cat-pg-card-body"><h4>Plantain Chips (Spicy)</h4><div class="cat-pg-weight">300g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$6.99</span><button class="cat-pg-add" data-name="Plantain Chips">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fff7ed/9a3412?text=Kilishi" alt="Kilishi Beef Jerky" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Kilishi (Beef Jerky)</h4><div class="cat-pg-weight">200g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$15.99</span><button class="cat-pg-add" data-name="Kilishi">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fff7ed/9a3412?text=Kuli+Kuli" alt="Kuli Kuli Peanut Snack" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Kuli Kuli (Peanut Snack)</h4><div class="cat-pg-weight">250g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$5.99</span><button class="cat-pg-add" data-name="Kuli Kuli">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fff7ed/9a3412?text=Coconut+Candy" alt="Coconut Candy" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Coconut Candy</h4><div class="cat-pg-weight">300g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$4.99</span><button class="cat-pg-add" data-name="Coconut Candy">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fff7ed/9a3412?text=Buns+Mix" alt="Buns Mix" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Buns Mix</h4><div class="cat-pg-weight">400g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$6.99</span><button class="cat-pg-add" data-name="Buns Mix">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fff7ed/9a3412?text=Meat+Pie+Kit" alt="Meat Pie Pastry Kit" loading="lazy"/><span class="cat-pg-badge">New</span></div><div class="cat-pg-card-body"><h4>Meat Pie Pastry Kit</h4><div class="cat-pg-weight">500g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$9.99</span><button class="cat-pg-add" data-name="Meat Pie Kit">Add</button></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ep-section alt-bg"><div class="ep-container"><div class="ep-cta-banner"><h3>Party Packs Available!</h3><p>Bulk snack packs for events, gatherings, and celebrations. Contact us for custom orders.</p><button class="btn-gold" data-page="contact" data-tab="getintouch"><i class="fas fa-envelope"></i> Contact Us</button></div></div></div>
+</div>
+
+<!-- EMBEDDED PAGE: Beverages -->
+<div class="embedded-page" id="beveragesPage">
+  <div class="ep-hero green-bg" style="background:linear-gradient(135deg,#1e3a5f,#2563eb) !important;">
+    <div class="ep-breadcrumb"><a href="#" data-page="home">Home</a><span>/</span><span>Shop</span><span>/</span><span>Beverages</span></div>
+    <h1>Nigerian <em>Beverages</em></h1>
+    <p>From nostalgic Milo and Bournvita to traditional Zobo and Kunu — drinks that taste like childhood.</p>
+  </div>
+  <div class="ep-section white-bg">
+    <div class="ep-container" style="max-width:1280px;">
+      <div class="ep-section-head">
+        <div class="section-tag">28 Products</div>
+        <h2 class="section-title">Classic <em>Beverages</em></h2>
+        <p class="section-desc" style="margin:0 auto">Hot drinks, cold refreshments, and traditional Nigerian beverages for every occasion.</p>
+      </div>
+      <div class="cat-pg-grid">
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/eff6ff/1e40af?text=Milo" alt="Milo Chocolate Drink" loading="lazy"/><span class="cat-pg-badge">Best Seller</span></div><div class="cat-pg-card-body"><h4>Milo Chocolate Drink</h4><div class="cat-pg-weight">400g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$12.99</span><button class="cat-pg-add" data-name="Milo">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/eff6ff/1e40af?text=Bournvita" alt="Bournvita" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Bournvita</h4><div class="cat-pg-weight">500g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$11.99</span><button class="cat-pg-add" data-name="Bournvita">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/eff6ff/1e40af?text=Zobo+Mix" alt="Zobo Hibiscus Mix" loading="lazy"/><span class="cat-pg-badge">Popular</span></div><div class="cat-pg-card-body"><h4>Zobo (Hibiscus) Mix</h4><div class="cat-pg-weight">200g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$6.99</span><button class="cat-pg-add" data-name="Zobo Mix">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/eff6ff/1e40af?text=Kunu+Mix" alt="Kunu Millet Drink" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Kunu Mix (Millet Drink)</h4><div class="cat-pg-weight">300g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$7.99</span><button class="cat-pg-add" data-name="Kunu Mix">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/eff6ff/1e40af?text=Peak+Milk" alt="Peak Evaporated Milk" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Peak Evaporated Milk</h4><div class="cat-pg-weight">6-pack</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$14.99</span><button class="cat-pg-add" data-name="Peak Milk">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/eff6ff/1e40af?text=Ginger+Tea" alt="Ginger Tea Blend" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Ginger Tea Blend</h4><div class="cat-pg-weight">100g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$8.99</span><button class="cat-pg-add" data-name="Ginger Tea">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/eff6ff/1e40af?text=Chapman+Mix" alt="Chapman Mix Syrup" loading="lazy"/><span class="cat-pg-badge">New</span></div><div class="cat-pg-card-body"><h4>Chapman Mix (Syrup)</h4><div class="cat-pg-weight">500ml</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$9.99</span><button class="cat-pg-add" data-name="Chapman Mix">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/eff6ff/1e40af?text=Lipton+Tea" alt="Lipton Yellow Label Tea" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Lipton Yellow Label Tea</h4><div class="cat-pg-weight">100 bags</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$7.99</span><button class="cat-pg-add" data-name="Lipton Tea">Add</button></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ep-section alt-bg"><div class="ep-container"><div class="ep-cta-banner"><h3>Pair With Your Favourite Snacks</h3><p>Explore our snack collection — perfect companions for your beverages.</p><button class="btn-gold" data-page="snacks"><i class="fas fa-cookie-bite"></i> Browse Snacks</button></div></div></div>
+</div>
+
+<!-- EMBEDDED PAGE: Proteins -->
+<div class="embedded-page" id="proteinsPage">
+  <div class="ep-hero green-bg" style="background:linear-gradient(135deg,#831843,#db2777) !important;">
+    <div class="ep-breadcrumb"><a href="#" data-page="home">Home</a><span>/</span><span>Shop</span><span>/</span><span>Proteins</span></div>
+    <h1>Dried <em>Proteins</em></h1>
+    <p>Premium stockfish, crayfish, smoked catfish, and more — the essential proteins that define Nigerian cuisine.</p>
+  </div>
+  <div class="ep-section white-bg">
+    <div class="ep-container" style="max-width:1280px;">
+      <div class="ep-section-head">
+        <div class="section-tag">41 Products</div>
+        <h2 class="section-title">Premium <em>Proteins</em></h2>
+        <p class="section-desc" style="margin:0 auto">Carefully dried, smoked, and preserved proteins shipped fresh for your soups and stews.</p>
+      </div>
+      <div class="cat-pg-grid">
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fdf2f8/9d174d?text=Premium+Stockfish" alt="Premium Stockfish" loading="lazy"/><span class="cat-pg-badge">Best Seller</span></div><div class="cat-pg-card-body"><h4>Premium Stockfish</h4><div class="cat-pg-weight">500g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$28.99</span><button class="cat-pg-add" data-name="Premium Stockfish">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fdf2f8/9d174d?text=Dried+Crayfish" alt="Dried Crayfish" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Dried Crayfish</h4><div class="cat-pg-weight">8 oz</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$14.99</span><button class="cat-pg-add" data-name="Dried Crayfish">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fdf2f8/9d174d?text=Smoked+Catfish" alt="Smoked Catfish" loading="lazy"/><span class="cat-pg-badge">Popular</span></div><div class="cat-pg-card-body"><h4>Smoked Catfish</h4><div class="cat-pg-weight">400g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$22.99</span><button class="cat-pg-add" data-name="Smoked Catfish">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fdf2f8/9d174d?text=Ponmo+(Cow+Skin)" alt="Ponmo Cow Skin" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Ponmo (Cow Skin)</h4><div class="cat-pg-weight">500g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$18.99</span><button class="cat-pg-add" data-name="Ponmo">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fdf2f8/9d174d?text=Smoked+Mackerel" alt="Smoked Mackerel" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Smoked Mackerel</h4><div class="cat-pg-weight">400g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$16.99</span><button class="cat-pg-add" data-name="Smoked Mackerel">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fdf2f8/9d174d?text=Dried+Prawns" alt="Dried Prawns" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Dried Prawns</h4><div class="cat-pg-weight">200g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$19.99</span><button class="cat-pg-add" data-name="Dried Prawns">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fdf2f8/9d174d?text=Snails+(Canned)" alt="Canned Snails" loading="lazy"/><span class="cat-pg-badge">New</span></div><div class="cat-pg-card-body"><h4>Snails (Canned)</h4><div class="cat-pg-weight">400g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$24.99</span><button class="cat-pg-add" data-name="Canned Snails">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/fdf2f8/9d174d?text=Dried+Periwinkle" alt="Dried Periwinkle" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Dried Periwinkle</h4><div class="cat-pg-weight">300g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$15.99</span><button class="cat-pg-add" data-name="Dried Periwinkle">Add</button></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ep-section alt-bg"><div class="ep-container"><div class="ep-cta-banner"><h3>Perfect for Soups &amp; Stews</h3><p>Check out our ready-to-cook meal kits that pair perfectly with these proteins.</p><button class="btn-gold" data-page="home" onclick="setTimeout(()=&gt;document.getElementById(&#39;meal-kits&#39;).scrollIntoView({behavior:&#39;smooth&#39;}),400)"><i class="fas fa-utensils"></i> View Meal Kits</button></div></div></div>
+</div>
+
+<!-- EMBEDDED PAGE: Sauces -->
+<div class="embedded-page" id="saucesPage">
+  <div class="ep-hero green-bg" style="background:linear-gradient(135deg,#4c1d95,#7c3aed) !important;">
+    <div class="ep-breadcrumb"><a href="#" data-page="home">Home</a><span>/</span><span>Shop</span><span>/</span><span>Sauces</span></div>
+    <h1>Oils &amp; <em>Sauces</em></h1>
+    <p>Premium palm oil, groundnut oil, tomato paste, and traditional sauce bases — the liquid gold of Nigerian cooking.</p>
+  </div>
+  <div class="ep-section white-bg">
+    <div class="ep-container" style="max-width:1280px;">
+      <div class="ep-section-head">
+        <div class="section-tag">22 Products</div>
+        <h2 class="section-title">Oils &amp; <em>Sauces</em></h2>
+        <p class="section-desc" style="margin:0 auto">From palm oil to egusi seeds — the essential bases for every Nigerian soup and sauce.</p>
+      </div>
+      <div class="cat-pg-grid">
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/f5f3ff/5b21b6?text=Premium+Palm+Oil" alt="Premium Palm Oil" loading="lazy"/><span class="cat-pg-badge">Best Seller</span></div><div class="cat-pg-card-body"><h4>Premium Palm Oil</h4><div class="cat-pg-weight">1 liter</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$12.99</span><button class="cat-pg-add" data-name="Premium Palm Oil">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/f5f3ff/5b21b6?text=Groundnut+Oil" alt="Groundnut Oil" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Groundnut Oil</h4><div class="cat-pg-weight">1 liter</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$9.99</span><button class="cat-pg-add" data-name="Groundnut Oil">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/f5f3ff/5b21b6?text=Shea+Butter+(Ori)" alt="Shea Butter Ori" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Shea Butter (Ori)</h4><div class="cat-pg-weight">500g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$14.99</span><button class="cat-pg-add" data-name="Shea Butter">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/f5f3ff/5b21b6?text=Tomato+Paste" alt="Tomato Paste" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Tomato Paste (Tin)</h4><div class="cat-pg-weight">800g</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$5.99</span><button class="cat-pg-add" data-name="Tomato Paste">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/f5f3ff/5b21b6?text=Ogbono+Seeds" alt="Ground Ogbono Seeds" loading="lazy"/><span class="cat-pg-badge">Popular</span></div><div class="cat-pg-card-body"><h4>Ground Ogbono Seeds</h4><div class="cat-pg-weight">8 oz</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$16.99</span><button class="cat-pg-add" data-name="Ogbono Seeds">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/f5f3ff/5b21b6?text=Ground+Egusi" alt="Ground Egusi Seeds" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Ground Egusi Seeds</h4><div class="cat-pg-weight">1 lb</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$13.99</span><button class="cat-pg-add" data-name="Ground Egusi">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/f5f3ff/5b21b6?text=Banga+Spice+Mix" alt="Banga Spice Mix" loading="lazy"/><span class="cat-pg-badge">New</span></div><div class="cat-pg-card-body"><h4>Banga Spice Mix</h4><div class="cat-pg-weight">6 oz</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$11.99</span><button class="cat-pg-add" data-name="Banga Spice Mix">Add</button></div></div></div>
+        <div class="cat-pg-card"><div class="cat-pg-card-img"><img src="https://placehold.co/400x300/f5f3ff/5b21b6?text=Ata+Rodo+Sauce" alt="Ata Rodo Pepper Sauce" loading="lazy"/></div><div class="cat-pg-card-body"><h4>Ata Rodo Pepper Sauce</h4><div class="cat-pg-weight">500ml</div><div class="cat-pg-card-footer"><span class="cat-pg-price">$8.99</span><button class="cat-pg-add" data-name="Ata Rodo Sauce">Add</button></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ep-section alt-bg"><div class="ep-container"><div class="ep-cta-banner"><h3>Need Proteins for Your Soup?</h3><p>Browse our premium dried proteins — the perfect companion for your sauces and stews.</p><button class="btn-gold" data-page="proteins"><i class="fas fa-drumstick-bite"></i> Browse Proteins</button></div></div></div>
+</div>
+
 <!-- Mobile Drawer -->
 <div class="mobile-drawer" id="mobileDrawer">
   <div class="md-header">
@@ -2196,12 +2392,12 @@ body.dark-mode .faq-cat-title{color:var(--green-light);}
     <div class="md-section">
       <div class="md-section-title">Shop</div>
       <ul class="md-links">
-        <li><a href="#categories" class="md-link"><i class="fas fa-wheat-awn"></i>Grains &amp; Cereals<span class="md-badge">48</span></a></li>
-        <li><a href="#categories" class="md-link"><i class="fas fa-pepper-hot"></i>Spices &amp; Seasonings<span class="md-badge">35</span></a></li>
-        <li><a href="#categories" class="md-link"><i class="fas fa-box-open"></i>Canned &amp; Dried Foods<span class="md-badge">27</span></a></li>
-        <li><a href="#categories" class="md-link"><i class="fas fa-cookie-bite"></i>Snacks<span class="md-badge">52</span></a></li>
-        <li><a href="#categories" class="md-link"><i class="fas fa-mug-hot"></i>Beverages<span class="md-badge">28</span></a></li>
-        <li><a href="#categories" class="md-link"><i class="fas fa-leaf"></i>Fresh Produce<span class="md-badge">15</span></a></li>
+        <li><a href="#" class="md-link" data-page="grains"><i class="fas fa-wheat-awn"></i>Grains &amp; Rice<span class="md-badge">48</span></a></li>
+        <li><a href="#" class="md-link" data-page="spices"><i class="fas fa-pepper-hot"></i>Spices &amp; Seasonings<span class="md-badge">35</span></a></li>
+        <li><a href="#" class="md-link" data-page="snacks"><i class="fas fa-cookie-bite"></i>Snacks<span class="md-badge">52</span></a></li>
+        <li><a href="#" class="md-link" data-page="beverages"><i class="fas fa-mug-hot"></i>Beverages<span class="md-badge">28</span></a></li>
+        <li><a href="#" class="md-link" data-page="proteins"><i class="fas fa-drumstick-bite"></i>Proteins<span class="md-badge">41</span></a></li>
+        <li><a href="#" class="md-link" data-page="sauces"><i class="fas fa-bottle-droplet"></i>Sauces<span class="md-badge">22</span></a></li>
       </ul>
     </div>
     <div class="md-divider"></div>
@@ -2395,12 +2591,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchItems = ['Classic Jollof Rice Kit','Egusi Soup Complete Kit','Authentic Suya Spice Kit','Premium Basmati Rice','Scotch Bonnet Peppers','Palm Oil','Crayfish','Chin Chin Snacks','Puff Puff Mix','Ofada Rice','Banga Soup Kit'];
 
   const categories = [
-    {name:'Grains & Rice',count:48,icon:'fa-wheat-awn',color:'linear-gradient(135deg,#d97706,#f59e0b)'},
-    {name:'Spices',count:35,icon:'fa-pepper-hot',color:'linear-gradient(135deg,#dc2626,#ef4444)'},
-    {name:'Snacks',count:52,icon:'fa-cookie-bite',color:'linear-gradient(135deg,#ea580c,#f97316)'},
-    {name:'Beverages',count:28,icon:'fa-mug-hot',color:'linear-gradient(135deg,#2563eb,#3b82f6)'},
-    {name:'Proteins',count:41,icon:'fa-drumstick-bite',color:'linear-gradient(135deg,#db2777,#ec4899)'},
-    {name:'Sauces',count:22,icon:'fa-bottle-droplet',color:'linear-gradient(135deg,#7c3aed,#a855f7)'}
+    {name:'Grains & Rice',count:48,icon:'fa-wheat-awn',color:'linear-gradient(135deg,#d97706,#f59e0b)',page:'grains'},
+    {name:'Spices',count:35,icon:'fa-pepper-hot',color:'linear-gradient(135deg,#dc2626,#ef4444)',page:'spices'},
+    {name:'Snacks',count:52,icon:'fa-cookie-bite',color:'linear-gradient(135deg,#ea580c,#f97316)',page:'snacks'},
+    {name:'Beverages',count:28,icon:'fa-mug-hot',color:'linear-gradient(135deg,#2563eb,#3b82f6)',page:'beverages'},
+    {name:'Proteins',count:41,icon:'fa-drumstick-bite',color:'linear-gradient(135deg,#db2777,#ec4899)',page:'proteins'},
+    {name:'Sauces',count:22,icon:'fa-bottle-droplet',color:'linear-gradient(135deg,#7c3aed,#a855f7)',page:'sauces'}
   ];
 
   const reviews = [
@@ -2620,10 +2816,11 @@ document.addEventListener('DOMContentLoaded', () => {
   categories.forEach(c => {
     const card = document.createElement('div');
     card.className = 'cat-card reveal';
+    card.setAttribute('data-page', c.page);
     card.innerHTML = `
       <div class="cat-icon" style="background:${c.color}"><i class="fas ${c.icon}"></i></div>
       <h4>${c.name}</h4>
-      <span>${c.count} items</span>
+      <span>${c.count} items <i class="fas fa-arrow-right" style="font-size:10px;margin-left:4px"></i></span>
     `;
     catGrid.appendChild(card);
   });
@@ -3213,10 +3410,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const storyPages = ['about','whyus','mission'];
       const deliveryPages = ['shipping','tracking','faqs','returns'];
       const contactPages = ['contact'];
+      const shopPages = ['grains','spices','snacks','beverages','proteins','sauces'];
       let parentText = '';
       if (storyPages.includes(pageId)) parentText = 'Our Story';
       else if (deliveryPages.includes(pageId)) parentText = 'Delivery Info';
       else if (contactPages.includes(pageId)) parentText = 'Contact Us';
+      else if (shopPages.includes(pageId)) parentText = 'Shop';
       if (parentText) {
         document.querySelectorAll('.nav-link-item.has-dropdown > a').forEach(a => {
           if (a.textContent.trim().startsWith(parentText)) a.classList.add('active-page');
@@ -3269,7 +3468,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Check hash on load
   const initHash = window.location.hash.replace('#','');
-  const allValidPages = ['about','whyus','mission','shipping','tracking','faqs','returns','contact'];
+  const allValidPages = ['about','whyus','mission','shipping','tracking','faqs','returns','contact','grains','spices','snacks','beverages','proteins','sauces'];
   if (initHash.startsWith('contact-')) {
     navigateToPage('contact', initHash.replace('contact-',''));
   } else if (allValidPages.includes(initHash)) {
@@ -3284,6 +3483,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const wasOpen = item.classList.contains('open');
       document.querySelectorAll('.faq-item.open').forEach(f => f.classList.remove('open'));
       if (!wasOpen) item.classList.add('open');
+    }
+  });
+
+  // Category page product add-to-cart
+  document.addEventListener('click', e => {
+    const cpgAdd = e.target.closest('.cat-pg-add');
+    if (cpgAdd) {
+      const name = cpgAdd.dataset.name;
+      cpgAdd.classList.add('added');
+      cpgAdd.textContent = '✓ Added';
+      setTimeout(() => { cpgAdd.classList.remove('added'); cpgAdd.textContent = 'Add'; }, 1600);
+      showToast(name + ' added to cart');
     }
   });
 
@@ -3319,6 +3530,8 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
 <script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
 <script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
+<script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
+
 
 
 
