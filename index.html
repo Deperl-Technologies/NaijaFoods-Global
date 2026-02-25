@@ -960,6 +960,72 @@ body.dark-mode .cat-pg-card-body h4{color:#eee;}
 body.dark-mode .cat-pg-card-footer{border-top-color:#2a2a2a;}
 body.dark-mode .cat-pg-card-footer .cat-pg-price{color:#eee;}
 
+/* CATEGORY PAGE HEARTS */
+.cat-pg-heart{position:absolute;bottom:10px;right:10px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--muted);z-index:3;cursor:none;transition:all .3s cubic-bezier(.34,1.56,.64,1);border:none;}
+.cat-pg-heart:hover{color:#dc3545;transform:scale(1.15);}
+.cat-pg-heart.liked{color:#dc3545;background:rgba(220,53,69,.1);}
+.cat-pg-heart.liked i{font-weight:900;}
+.cat-pg-heart.pop{animation:heartPop .4s cubic-bezier(.34,1.56,.64,1);}
+body.dark-mode .cat-pg-heart{background:rgba(30,30,30,.92);}
+.pd-wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+.pd-back{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:var(--radius-pill);font-size:14px;font-weight:500;color:var(--mid);border:1px solid var(--border);background:#fff;transition:all .25s;cursor:none;margin-bottom:32px;}
+.pd-back:hover{border-color:var(--green);color:var(--green);gap:12px;}
+.pd-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+@media(max-width:768px){.pd-grid{grid-template-columns:1fr;gap:28px;}}
+.pd-image{border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.1);position:sticky;top:100px;}
+@media(max-width:768px){.pd-image{position:static;}}
+.pd-image img{width:100%;min-height:300px;max-height:500px;object-fit:cover;display:block;}
+.pd-info h1{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);font-weight:900;color:var(--charcoal);margin-bottom:12px;line-height:1.2;}
+.pd-meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;}
+.pd-meta-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:var(--radius-pill);font-size:12px;font-weight:600;}
+.pd-meta-tag.badge-tag{background:var(--gold);color:var(--green-dark);}
+.pd-meta-tag.origin-tag{background:var(--green-muted);color:var(--green);}
+.pd-meta-tag.weight-tag{background:var(--cream);color:var(--mid);font-family:'Space Mono',monospace;}
+.pd-price{font-family:'Space Mono',monospace;font-size:clamp(28px,4vw,36px);font-weight:700;color:var(--charcoal);margin-bottom:24px;}
+.pd-desc{color:var(--mid);font-size:15px;line-height:1.8;font-weight:300;margin-bottom:28px;}
+.pd-features{list-style:none;margin-bottom:32px;background:var(--cream);border-radius:16px;padding:20px 24px;}
+.pd-features li{display:flex;align-items:center;gap:10px;padding:10px 0;font-size:14px;color:var(--mid);border-bottom:1px solid var(--border);}
+.pd-features li:last-child{border-bottom:none;}
+.pd-features li i{color:var(--green);font-size:14px;flex-shrink:0;width:20px;text-align:center;}
+.pd-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.pd-add-cart{flex:1;min-width:180px;padding:16px 28px;background:var(--green);color:#fff;font-size:15px;font-weight:600;border-radius:var(--radius-btn);transition:all .3s;display:flex;align-items:center;justify-content:center;gap:8px;cursor:none;}
+.pd-add-cart:hover{background:var(--green-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,107,60,.2);}
+.pd-add-cart.added{background:var(--gold);color:var(--green-dark);}
+.pd-like-btn{width:56px;height:56px;border-radius:var(--radius-btn);border:1px solid var(--border);background:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--muted);transition:all .3s;cursor:none;flex-shrink:0;}
+.pd-like-btn:hover{color:#dc3545;border-color:#dc3545;transform:scale(1.08);}
+.pd-like-btn.liked{color:#dc3545;background:rgba(220,53,69,.06);border-color:#dc3545;}
+.pd-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px;padding-top:28px;border-top:1px solid var(--border);}
+@media(max-width:540px){.pd-trust{grid-template-columns:1fr;gap:10px;}}
+.pd-trust-item{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--mid);}
+.pd-trust-item i{font-size:16px;color:var(--green);}
+body.dark-mode .pd-back{background:#1e1e1e;border-color:#2a2a2a;color:#888;}
+body.dark-mode .pd-back:hover{border-color:var(--green-light);color:var(--green-light);}
+body.dark-mode .pd-image{box-shadow:0 20px 60px rgba(0,0,0,.3);}
+body.dark-mode .pd-info h1{color:#eee;}
+body.dark-mode .pd-price{color:#eee;}
+body.dark-mode .pd-meta-tag.weight-tag{background:#222;color:#999;}
+body.dark-mode .pd-meta-tag.origin-tag{background:rgba(0,168,90,.12);color:var(--green-light);}
+body.dark-mode .pd-features{background:#1e1e1e;}
+body.dark-mode .pd-features li{border-bottom-color:#2a2a2a;}
+body.dark-mode .pd-like-btn{background:#1e1e1e;border-color:#2a2a2a;}
+body.dark-mode .pd-trust{border-top-color:#2a2a2a;}
+
+/* CUSTOM ORDER */
+.co-upload-area{border:2px dashed var(--border);border-radius:var(--radius-card);padding:32px;text-align:center;cursor:none;transition:all .3s;position:relative;overflow:hidden;}
+.co-upload-area:hover{border-color:var(--green);background:var(--green-muted);}
+.co-upload-area.has-file{border-color:var(--green);border-style:solid;}
+.co-upload-area input[type="file"]{position:absolute;inset:0;opacity:0;cursor:none;}
+.co-upload-area i.upload-icon{font-size:36px;color:var(--muted);margin-bottom:12px;display:block;}
+.co-upload-area p.upload-text{font-size:14px;color:var(--mid);font-weight:300;}
+.co-upload-area .upload-hint{font-size:12px;color:var(--muted);margin-top:6px;display:block;}
+.co-upload-preview{max-width:200px;max-height:200px;border-radius:12px;margin:12px auto 0;object-fit:cover;display:none;}
+.co-upload-area.has-file .co-upload-preview{display:block;}
+.co-upload-area.has-file .upload-icon,.co-upload-area.has-file .upload-text,.co-upload-area.has-file .upload-hint{display:none;}
+body.dark-mode .co-upload-area{border-color:#333;}
+body.dark-mode .co-upload-area:hover{border-color:var(--green-light);background:rgba(0,168,90,.08);}
+.custom-success{text-align:center;padding:48px 24px;animation:fadeUp .5s ease;}
+.custom-success .check-circle{width:80px;height:80px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 24px;animation:checkPop .7s cubic-bezier(.34,1.56,.64,1);}
+
 /* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s cubic-bezier(.34,1.56,.64,1);}
 .reveal.visible{opacity:1;transform:translateY(0);}
@@ -1005,6 +1071,8 @@ body.dark-mode .cat-pg-card-footer .cat-pg-price{color:#eee;}
           <a href="#" data-page="beverages"><i class="fas fa-mug-hot"></i>Beverages</a>
           <a href="#" data-page="proteins"><i class="fas fa-drumstick-bite"></i>Proteins</a>
           <a href="#" data-page="sauces"><i class="fas fa-bottle-droplet"></i>Sauces</a>
+          <div style="height:1px;background:var(--border);margin:6px 0;"></div>
+          <a href="#" data-page="customorder"><i class="fas fa-clipboard-list"></i>Custom Order</a>
         </div>
       </div>
       <div class="nav-link-item has-dropdown">
@@ -2364,6 +2432,97 @@ body.dark-mode .cat-pg-card-footer .cat-pg-price{color:#eee;}
   <div class="ep-section alt-bg"><div class="ep-container"><div class="ep-cta-banner"><h3>Need Proteins for Your Soup?</h3><p>Browse our premium dried proteins — the perfect companion for your sauces and stews.</p><button class="btn-gold" data-page="proteins"><i class="fas fa-drumstick-bite"></i> Browse Proteins</button></div></div></div>
 </div>
 
+<!-- EMBEDDED PAGE: Custom Order -->
+<div class="embedded-page" id="customorderPage">
+  <div class="ep-hero green-bg" style="background:linear-gradient(135deg,#065f46,#10b981) !important;">
+    <div class="ep-breadcrumb"><a href="#" data-page="home">Home</a><span>/</span><span>Custom Order</span></div>
+    <h1>Custom <em>Order</em></h1>
+    <p>Can&#39;t find what you&#39;re looking for? Tell us exactly what you need and we&#39;ll source it directly from Nigeria for you.</p>
+  </div>
+  <div class="ep-section white-bg">
+    <div class="ep-container" style="max-width:760px;">
+      <div class="ep-section-head">
+        <div class="section-tag">Special Request</div>
+        <h2 class="section-title">Submit Your <em>Custom Order</em></h2>
+        <p class="section-desc" style="margin:0 auto">Whether it&#39;s a rare spice, a bulk order, or a specific brand — describe what you need and we&#39;ll make it happen.</p>
+      </div>
+      <div id="customOrderFormWrap">
+        <div class="contact-form">
+          <div class="cf-grid">
+            <div class="cf-field"><label>Your Name *</label><input type="text" id="coFormName" placeholder="Adaeze Okafor"/></div>
+            <div class="cf-field"><label>Email Address *</label><input type="email" id="coFormEmail" placeholder="adaeze@example.com"/></div>
+            <div class="cf-field"><label>Phone Number *</label><input type="tel" id="coFormPhone" placeholder="+1 (555) 000-0000"/></div>
+            <div class="cf-field"><label>Quantity</label><input type="number" id="coFormQty" placeholder="1" min="1" value="1"/></div>
+            <div class="cf-field full">
+              <label>Upload Product Image (Optional)</label>
+              <div class="co-upload-area" id="coUploadArea">
+                <input type="file" id="coFormFile" accept="image/*"/>
+                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                <p class="upload-text">Click or drag an image here</p>
+                <span class="upload-hint">JPG, PNG, WEBP — Max 5MB</span>
+                <img class="co-upload-preview" id="coUploadPreview" alt="Upload preview"/>
+              </div>
+            </div>
+            <div class="cf-field full"><label>Product Description *</label><textarea id="coFormDesc" placeholder="Describe the product you&#39;re looking for — name, brand, size, type, etc." style="min-height:100px;"></textarea></div>
+            <div class="cf-field full"><label>Special Instructions / Requests</label><textarea id="coFormInstr" placeholder="Any specific requirements — packaging, freshness, substitutions, delivery preferences, etc." style="min-height:80px;"></textarea></div>
+          </div>
+          <button class="cf-submit" id="coFormSubmit"><i class="fas fa-paper-plane" style="margin-right:8px"></i>Submit Custom Order</button>
+        </div>
+      </div>
+      <div id="customOrderSuccess" class="custom-success" style="display:none;">
+        <div class="check-circle"><i class="fas fa-check"></i></div>
+        <h3 style="font-family:&#39;Playfair Display&#39;,serif;font-size:26px;font-weight:700;margin-bottom:10px;">Custom Order Submitted!</h3>
+        <p style="color:var(--mid);font-size:15px;max-width:480px;margin:0 auto 8px;">Your request has been received. Our sourcing team will review it and get back to you within 24–48 hours.</p>
+        <span id="coSuccessRef" style="font-family:&#39;Space Mono&#39;,monospace;font-size:14px;color:var(--green);font-weight:700;display:block;margin-bottom:24px;"></span>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <button class="btn-gold" id="coSubmitAnother"><i class="fas fa-plus" style="margin-right:6px"></i>Submit Another</button>
+          <button class="btn-ghost" style="color:var(--green);border-color:var(--green);padding:14px 28px;border-radius:12px;" data-page="home">Back to Shop</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ep-section alt-bg">
+    <div class="ep-container">
+      <div class="ep-section-head">
+        <div class="section-tag">How It Works</div>
+        <h2 class="section-title">Three Simple <em>Steps</em></h2>
+      </div>
+      <div class="ep-values-grid" style="max-width:900px;margin:0 auto;">
+        <div class="ep-value-card" style="text-align:center;">
+          <div class="ep-vc-icon" style="background:linear-gradient(135deg,var(--green-dark),var(--green));margin:0 auto 18px;"><i class="fas fa-search"></i></div>
+          <h3>We Source It</h3>
+          <p>Our team locates the exact product you need from trusted suppliers across Nigeria.</p>
+        </div>
+        <div class="ep-value-card" style="text-align:center;">
+          <div class="ep-vc-icon" style="background:linear-gradient(135deg,#d97706,#f59e0b);margin:0 auto 18px;"><i class="fas fa-tag"></i></div>
+          <h3>We Quote It</h3>
+          <p>You&#39;ll receive a price quote and delivery estimate within 24–48 hours via email.</p>
+        </div>
+        <div class="ep-value-card" style="text-align:center;">
+          <div class="ep-vc-icon" style="background:linear-gradient(135deg,#2563eb,#3b82f6);margin:0 auto 18px;"><i class="fas fa-shipping-fast"></i></div>
+          <h3>We Ship It</h3>
+          <p>Once confirmed, we pack and ship your custom order with the same care as all our products.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ep-section white-bg">
+    <div class="ep-container">
+      <div class="ep-cta-banner">
+        <h3>Prefer to Browse Our Store?</h3>
+        <p>Explore our 380+ products across 6 categories — you might find exactly what you need.</p>
+        <button class="btn-gold" data-page="home" onclick="setTimeout(()=&gt;document.getElementById(&#39;categories&#39;).scrollIntoView({behavior:&#39;smooth&#39;}),400)"><i class="fas fa-th-large"></i> Browse Categories</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="embedded-page" id="productdetailPage">
+  <div class="ep-section white-bg" style="padding-top:120px;padding-bottom:80px;">
+    <div class="pd-wrap" id="pdContent"></div>
+  </div>
+</div>
+
 <!-- Mobile Drawer -->
 <div class="mobile-drawer" id="mobileDrawer">
   <div class="md-header">
@@ -2398,6 +2557,7 @@ body.dark-mode .cat-pg-card-footer .cat-pg-price{color:#eee;}
         <li><a href="#" class="md-link" data-page="beverages"><i class="fas fa-mug-hot"></i>Beverages<span class="md-badge">28</span></a></li>
         <li><a href="#" class="md-link" data-page="proteins"><i class="fas fa-drumstick-bite"></i>Proteins<span class="md-badge">41</span></a></li>
         <li><a href="#" class="md-link" data-page="sauces"><i class="fas fa-bottle-droplet"></i>Sauces<span class="md-badge">22</span></a></li>
+        <li><a href="#" class="md-link" data-page="customorder"><i class="fas fa-clipboard-list"></i>Custom Order<span class="md-badge" style="background:var(--gold);color:var(--green-dark);">NEW</span></a></li>
       </ul>
     </div>
     <div class="md-divider"></div>
@@ -2623,9 +2783,10 @@ document.addEventListener('DOMContentLoaded', () => {
     FR:{standard:14.99,express:32.99,priority:64.99,days:{standard:'7–10 days',express:'3–4 days',priority:'1–2 days'}}
   };
 
-  let cart = [];
+  let cart = JSON.parse(localStorage.getItem('nfg_cart') || '[]');
   let wishlist = JSON.parse(localStorage.getItem('nfg_wishlist') || '[]');
   let currentLightbox = 0;
+  let catWishlist = new Set(JSON.parse(localStorage.getItem('nfg_catwishlist') || '[]'));
 
   // ======== CUSTOM CURSOR ========
   const dot = document.querySelector('.cursor-dot');
@@ -2878,6 +3039,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ======== CART LOGIC ========
   function updateCart() {
+    localStorage.setItem('nfg_cart', JSON.stringify(cart));
     const body = document.getElementById('cartBody');
     const footer = document.getElementById('cartFooter');
     const countEl = document.getElementById('cartCount');
@@ -2962,11 +3124,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateWishlistBadge() {
+    const total = wishlist.length + catWishlist.size;
     const countEl = document.getElementById('wishlistCount');
-    if (wishlist.length === 0) { countEl.classList.remove('visible'); }
-    else { countEl.classList.add('visible'); countEl.textContent = wishlist.length; }
+    if (total === 0) { countEl.classList.remove('visible'); }
+    else { countEl.classList.add('visible'); countEl.textContent = total; }
     const mdWC = document.getElementById('mdWlCount');
-    if (mdWC) mdWC.textContent = wishlist.length;
+    if (mdWC) mdWC.textContent = total;
   }
 
   function renderWishlistSidebar() {
@@ -3410,7 +3573,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const storyPages = ['about','whyus','mission'];
       const deliveryPages = ['shipping','tracking','faqs','returns'];
       const contactPages = ['contact'];
-      const shopPages = ['grains','spices','snacks','beverages','proteins','sauces'];
+      const shopPages = ['grains','spices','snacks','beverages','proteins','sauces','customorder','productdetail'];
       let parentText = '';
       if (storyPages.includes(pageId)) parentText = 'Our Story';
       else if (deliveryPages.includes(pageId)) parentText = 'Delivery Info';
@@ -3468,10 +3631,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Check hash on load
   const initHash = window.location.hash.replace('#','');
-  const allValidPages = ['about','whyus','mission','shipping','tracking','faqs','returns','contact','grains','spices','snacks','beverages','proteins','sauces'];
+  const allValidPages = ['about','whyus','mission','shipping','tracking','faqs','returns','contact','grains','spices','snacks','beverages','proteins','sauces','customorder','productdetail'];
   if (initHash.startsWith('contact-')) {
     navigateToPage('contact', initHash.replace('contact-',''));
-  } else if (allValidPages.includes(initHash)) {
+  } else if (allValidPages.includes(initHash) && initHash !== 'productdetail') {
     navigateToPage(initHash);
   }
 
@@ -3486,15 +3649,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Category page product add-to-cart
+  // Category page product add-to-cart (actually adds to cart)
   document.addEventListener('click', e => {
     const cpgAdd = e.target.closest('.cat-pg-add');
     if (cpgAdd) {
+      const card = cpgAdd.closest('.cat-pg-card');
       const name = cpgAdd.dataset.name;
+      const priceText = card.querySelector('.cat-pg-price').textContent;
+      const price = parseFloat(priceText.replace('$',''));
+      const img = card.querySelector('.cat-pg-card-img img').src;
+      cart.push({ id: 'cat-' + name.replace(/\s+/g,'-').toLowerCase() + '-' + Date.now(), name: name, price: price, img: img });
+      updateCart();
       cpgAdd.classList.add('added');
       cpgAdd.textContent = '✓ Added';
       setTimeout(() => { cpgAdd.classList.remove('added'); cpgAdd.textContent = 'Add'; }, 1600);
       showToast(name + ' added to cart');
+    }
+  });
+
+  // Category page heart/like buttons
+  document.addEventListener('click', e => {
+    const heart = e.target.closest('.cat-pg-heart');
+    if (heart) {
+      e.stopPropagation();
+      const name = heart.dataset.name;
+      if (catWishlist.has(name)) {
+        catWishlist.delete(name);
+        heart.classList.remove('liked');
+        heart.querySelector('i').className = 'far fa-heart';
+      } else {
+        catWishlist.add(name);
+        heart.classList.add('liked');
+        heart.querySelector('i').className = 'fas fa-heart';
+        heart.classList.add('pop');
+        setTimeout(() => heart.classList.remove('pop'), 400);
+        showToast(name + ' added to wishlist');
+      }
+      localStorage.setItem('nfg_catwishlist', JSON.stringify([...catWishlist]));
+      updateWishlistBadge();
     }
   });
 
@@ -3520,26 +3712,89 @@ document.addEventListener('DOMContentLoaded', () => {
     result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   };
 
+  // ======== INJECT HEART BUTTONS INTO CATEGORY PAGES ========
+  document.querySelectorAll('.cat-pg-card').forEach(card => {
+    const imgDiv = card.querySelector('.cat-pg-card-img');
+    const addBtn = card.querySelector('.cat-pg-add');
+    if (imgDiv && addBtn) {
+      const name = addBtn.dataset.name;
+      const heart = document.createElement('button');
+      const isLiked = catWishlist.has(name);
+      heart.className = 'cat-pg-heart' + (isLiked ? ' liked' : '');
+      heart.dataset.name = name;
+      heart.setAttribute('aria-label', 'Like ' + name);
+      heart.innerHTML = '<i class="' + (isLiked ? 'fas' : 'far') + ' fa-heart"></i>';
+      imgDiv.appendChild(heart);
+    }
+  });
+
+  // PRODUCT DETAIL
+  let prevCatPage='home';
+  function getCN(p){return{grains:'Grains & Rice',spices:'Spices & Seasonings',snacks:'Snacks',beverages:'Beverages',proteins:'Proteins',sauces:'Sauces'}[p]||'Shop';}
+  function gD(n,c){return{grains:'Authentic Nigerian '+n+', sourced from trusted farms across Nigeria. A staple in West African cuisine. Carefully packaged to preserve freshness for diaspora families.',spices:'Premium '+n+', essential in authentic Nigerian cooking. Hand-selected for maximum flavour. Brings the true taste of Nigeria to your kitchen.',snacks:'Delicious '+n+' \u2014 a beloved Nigerian snack. Made with traditional recipes and the finest ingredients. Perfect for parties or treating yourself.',beverages:'Classic '+n+', a favourite across Nigerian households. Rich, flavourful, nostalgic \u2014 bringing home comfort to the diaspora.',proteins:'Premium '+n+', carefully preserved using traditional methods. Essential for authentic soups and stews. Packed fresh for richest flavour.',sauces:'Authentic '+n+' from Nigeria \u2014 key in traditional West African cooking. Sourced for maximum freshness and quality.'}[c]||'Authentic Nigerian '+n+', sourced from Nigeria. Premium quality, shipped fresh to 45+ countries.';}
+  function openPD(card){prevCatPage=currentPage;var n=card.querySelector('.cat-pg-card-body h4').textContent,pt=card.querySelector('.cat-pg-price').textContent,wt=card.querySelector('.cat-pg-weight').textContent,im=card.querySelector('.cat-pg-card-img img').src,be=card.querySelector('.cat-pg-badge'),bt=be?be.textContent:'',ds=gD(n,prevCatPage),il=catWishlist.has(n);document.getElementById('pdContent').innerHTML='<button class="pd-back" id="pdBk"><i class="fas fa-arrow-left"></i> Back to '+getCN(prevCatPage)+'</button><div class="pd-grid"><div class="pd-image"><img src="'+im+'" alt="'+n+'"></div><div class="pd-info"><div class="pd-meta">'+(bt?'<span class="pd-meta-tag badge-tag"><i class="fas fa-star"></i> '+bt+'</span>':'')+'<span class="pd-meta-tag origin-tag"><i class="fas fa-globe-africa"></i> Imported from Nigeria</span><span class="pd-meta-tag weight-tag"><i class="fas fa-weight-hanging"></i> '+wt+'</span></div><h1>'+n+'</h1><div class="pd-price">'+pt+'</div><p class="pd-desc">'+ds+'</p><ul class="pd-features"><li><i class="fas fa-check-circle"></i> 100% authentic Nigerian product</li><li><i class="fas fa-leaf"></i> Sourced from trusted farms</li><li><i class="fas fa-box-open"></i> Packaged for freshness</li><li><i class="fas fa-shipping-fast"></i> Ships to 45+ countries</li><li><i class="fas fa-shield-halved"></i> 30-day guarantee</li></ul><div class="pd-actions"><button class="pd-add-cart" id="pdAC" data-name="'+n+'" data-price="'+pt.replace('$','')+'" data-img="'+im+'"><i class="fas fa-shopping-bag"></i> Add to Cart</button><button class="pd-like-btn'+(il?' liked':'')+'" id="pdLB" data-name="'+n+'"><i class="'+(il?'fas':'far')+' fa-heart"></i></button></div><div class="pd-trust"><div class="pd-trust-item"><i class="fas fa-certificate"></i> Certified Authentic</div><div class="pd-trust-item"><i class="fas fa-truck"></i> 5-7 Day Delivery</div><div class="pd-trust-item"><i class="fas fa-undo"></i> Easy Returns</div></div></div></div>';navigateToPage('productdetail');document.getElementById('pdBk').onclick=function(){navigateToPage(prevCatPage);};document.getElementById('pdAC').onclick=function(){var p=parseFloat(this.dataset.price),nm=this.dataset.name,m=this.dataset.img;cart.push({id:'c-'+Date.now(),name:nm,price:p,img:m});updateCart();this.classList.add('added');this.innerHTML='<i class="fas fa-check"></i> Added';var s=this;setTimeout(function(){s.classList.remove('added');s.innerHTML='<i class="fas fa-shopping-bag"></i> Add to Cart';},2e3);showToast(nm+' added to cart');};document.getElementById('pdLB').onclick=function(){var nm=this.dataset.name;if(catWishlist.has(nm)){catWishlist.delete(nm);this.classList.remove('liked');this.querySelector('i').className='far fa-heart';}else{catWishlist.add(nm);this.classList.add('liked');this.querySelector('i').className='fas fa-heart';showToast(nm+' added to wishlist');}localStorage.setItem('nfg_catwishlist',JSON.stringify([...catWishlist]));updateWishlistBadge();document.querySelectorAll('.cat-pg-heart[data-name="'+nm+'"]').forEach(function(h){h.classList.toggle('liked',catWishlist.has(nm));h.querySelector('i').className=catWishlist.has(nm)?'fas fa-heart':'far fa-heart';});};}
+  document.addEventListener('click',function(e){var c=e.target.closest('.cat-pg-card');if(c&&!e.target.closest('.cat-pg-add')&&!e.target.closest('.cat-pg-heart'))openPD(c);});
+
+  // ======== CUSTOM ORDER FORM ========
+  const coFormSubmit = document.getElementById('coFormSubmit');
+  if (coFormSubmit) {
+    coFormSubmit.addEventListener('click', () => {
+      let valid = true;
+      ['coFormName','coFormEmail','coFormPhone','coFormDesc'].forEach(fid => {
+        const el = document.getElementById(fid);
+        if (!el.value.trim()) { el.style.borderColor = '#dc3545'; valid = false; } else { el.style.borderColor = ''; }
+      });
+      if (!valid) { showToast('Please fill in all required fields'); return; }
+      const ref = 'CO-' + String(Math.floor(10000 + Math.random() * 90000));
+      document.getElementById('coSuccessRef').textContent = 'Reference: ' + ref;
+      document.getElementById('customOrderFormWrap').style.display = 'none';
+      document.getElementById('customOrderSuccess').style.display = '';
+      showToast('Custom order submitted successfully!');
+    });
+  }
+
+  const coSubmitAnother = document.getElementById('coSubmitAnother');
+  if (coSubmitAnother) {
+    coSubmitAnother.addEventListener('click', () => {
+      ['coFormName','coFormEmail','coFormPhone','coFormDesc','coFormInstr'].forEach(fid => {
+        const el = document.getElementById(fid);
+        if (el) el.value = '';
+      });
+      const qtyEl = document.getElementById('coFormQty');
+      if (qtyEl) qtyEl.value = '1';
+      const preview = document.getElementById('coUploadPreview');
+      if (preview) { preview.style.display = 'none'; preview.src = ''; }
+      const uploadArea = document.getElementById('coUploadArea');
+      if (uploadArea) uploadArea.classList.remove('has-file');
+      const fileInput = document.getElementById('coFormFile');
+      if (fileInput) fileInput.value = '';
+      document.getElementById('customOrderSuccess').style.display = 'none';
+      document.getElementById('customOrderFormWrap').style.display = '';
+    });
+  }
+
+  // Image upload preview
+  const coFormFile = document.getElementById('coFormFile');
+  if (coFormFile) {
+    coFormFile.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        if (file.size > 5 * 1024 * 1024) { showToast('File too large — max 5MB'); e.target.value = ''; return; }
+        const reader = new FileReader();
+        reader.onload = (ev) => {
+          const preview = document.getElementById('coUploadPreview');
+          preview.src = ev.target.result;
+          preview.style.display = 'block';
+          document.getElementById('coUploadArea').classList.add('has-file');
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  }
+
 });
 </script>
 <script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
-<script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
-<script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
-<script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
-<script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
-<script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
-<script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
-<script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
-<script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
-
-
-
-
-
-
-
-
-
 
 
 </body></html>
